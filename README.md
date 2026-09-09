@@ -32,6 +32,8 @@ The network results are means across 5 training runs because a single run is not
 
 Each polynomial regression model, from degrees 1 to 10, ranged from an RMSE of 1.952 to 1.757, reaching a minimum at degree 8 and rising again at 9 and 10. These were scored on a validation set held out from the training data, so they are not comparable to the test RMSEs above. The differences were small between degrees, and the degree 10 polynomial when plotted showed signs of overfitting the data as there were curves in places with no data. This leads to the logarithmic regression model which had an RMSE of 1.926.
 
+![GDP per capita vs life expectancy, with a degree 10 polynomial in red and a log fit in blue](plots/gdp_log_vs_poly.png)
+
 When evaluated on the 2015 dataset, the best network got an RMSE of 1.47, while the chosen regression model, logarithmic, got an RMSE of 2.02.
 
 One interesting finding was that the BMI coefficient turned negative when under control. Without control, an increase in it seems to increase life expectancy, but with control, a unit increase is associated with a life expectancy decrease of about 0.0764 years. It also had a p value of 0.0015 showing that it was significant.
