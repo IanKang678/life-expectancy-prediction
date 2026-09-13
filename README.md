@@ -39,7 +39,7 @@ When evaluated on the 2015 dataset, the best network got an RMSE of 1.47, while 
 One interesting finding was that the BMI coefficient turned negative when under control. Without control, an increase in it seems to increase life expectancy, but with control, a unit increase is associated with a life expectancy decrease of about 0.0764 years. It also had a p value of 0.0015 showing that it was significant.
 
 ## Validation and leakage
-There were three leaks in the project, two of which were fixed.
+There were four leaks in the project, three of which were fixed.
 
 The original part 5 evaluation was on the entire 2015 dataset, 80% of which was training data. The neural model had used that data to train, causing it to produce results which were more accurate than it should have been. This was fixed by filtering from only the test set, data the network had not seen before.
 
